@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Recommended meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <!-- CSS for examples -->
+    <!-- <link rel="stylesheet" href="./assets/css/examples.css" /> -->
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js"></script>
+    
+    <title>Matplotlib</title>
+    <style>
+      #reload-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Este código exibe frutas e imagens ao carregar a página.</p>
+    <select id="ano-dropdown">
+      <option value="2023">2023</option>
+      <option value="2024" selected>2024</option>
+    </select>
+    <!-- <select id = "path">
+      <option value="./testesPy/MissaoZero_BaseDados.xlsx">path</option>
+    </select> -->
+    <!-- D:/OneDrive/Docs Oficial/estudos/barbarardfonseca.github.io/testesPy/MissaoZero_BaseDados.xlsx -->
+    
+    <section id="pyscript-section" class="pyscript">
+      <div id="data_placeholder" style="display: none;"></div>
+      <script type="py" src="./data_placeholder.py" config="./pyscript.toml"></script>
+    </section>
+
+    <section id="pyscript-section-2" class="pyscript">
+      <div id="graphic2"></div>
+      <script type="py" src="./grafico_script.py" config="./pyscript.toml"></script>
+    </section>
+
+    <section id="pyscript-section-3" class="pyscript">
+      <div id="graphicmap"></div>
+      <script type="py" src="./grafico_mapa.py" config="./pyscript.toml"></script>
+    </section>
+
+    <!-- Botão para atualizar a página -->
+    <button id="reload-button" onclick="location.reload();">Atualizar Página</button>
+  </body>
+</html>

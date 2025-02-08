@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Recommended meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!-- PyScript CSS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <!-- CSS for examples -->
+    <link rel="stylesheet" href="./assets/css/examples.css" />
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <title>Matplotlib</title>
+    <style>
+      #reload-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Este código exibe frutas e imagens ao carregar a página.</p>
+    <select id="ano-dropdown">
+      <option value="2023">2023</option>
+      <option value="2024" selected>2024</option>
+    </select>
+
+     <!-- Adicionando elemento de upload -->
+     <section id="upload-section">
+      <p>Carregue um arquivo Excel ou use o caminho estático:</p>
+      <input type="file" id="file-upload" accept=".xlsx, .xls" />
+      <button id="load-static">Carregar Arquivo Estático</button>
+      <div id="output"></div>
+    </section>
+
+    <script>
+      document.getElementById("load-static").addEventListener("click", async () => {
+      const staticFilePath = "D:/OneDrive/Docs Oficial/estudos/barbarardfonseca.github.io/testesPy/MissaoZero_BaseDados.xlsx";
+      })
+    </script>
+    
+    <section id="pyscript-section2" class="pyscript">
+      <div id="mpl2"></div>
+      <script type="py" src="./grafico-script-2.py" config="./pyscript.toml"></script>
+    </section>
+
+    <section id="test" class="pyscript">
+      <div id="alldata"></div>
+      <script type="py" src="./teste grafico-script.py" config="./pyscript.toml"></script>
+    </section>
+
+    <!-- Botão para atualizar a página -->
+    <button id="reload-button" onclick="location.reload();">Atualizar Página</button>
+  </body>
+</html>

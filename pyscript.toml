@@ -1,0 +1,5 @@
+name = "Matplotlib"
+description = "A simple application showing how to use Matplotlib to generate a graph and display it with PyScript."
+packages = ["matplotlib", "pandas","requests","openpyxl","plotly.express", "plotly"]
+[experimental]
+web-worker = true

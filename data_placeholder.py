@@ -4,7 +4,7 @@ import requests
 from pyscript import display
 
 # Processar os dados
-url = "https://raw.githubusercontent.com/barbarardfonseca/barbarardfonseca.github.io/master/testesPy/MissaoZero_BaseDados.xlsx"
+url = "https://raw.githubusercontent.com/barbarardfonseca/relatorio_python/main/MissaoZero_BaseDados.xlsx"
 response = requests.get(url)
 response.raise_for_status()
 excel_data = pd.ExcelFile(io.BytesIO(response.content), engine="openpyxl")
